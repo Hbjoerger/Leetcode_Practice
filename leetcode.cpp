@@ -35,8 +35,21 @@ public:
 
 int main() {
     Solution s;
-    cout << s.addDigits(38) << endl;  // Output: 2
-    cout << s.addDigits(0) << endl;   // Output: 0
-    cout << s.addDigits(942) << endl; // Output: 6
-    return 0;
+
+    // ---- Problem One: Add Digits ----
+    cout << "AddDigits Tests:" << endl;
+    cout << "38 -> " << s.addDigits(38) << endl;    // Expected: 2
+    cout << "0 -> " << s.addDigits(0) << endl;      // Expected: 0
+    cout << "942 -> " << s.addDigits(942) << endl;  // Expected: 6
+    cout << "99 -> " << s.addDigits(99) << endl;    // Expected: 9
+    cout << "12345 -> " << s.addDigits(12345) << endl; // Expected: 6 (1+2+3+4+5=15 -> 1+5=6)
+
+    // ---- Problem Two: First Unique Character ----
+    cout << "\nFirstUniqChar Tests:" << endl;
+    cout << "\"leetcode\" -> " << s.firstUniqChar("leetcode") << endl;       // Expected: 0 ('l')
+    cout << "\"loveleetcode\" -> " << s.firstUniqChar("loveleetcode") << endl; // Expected: 2 ('v')
+    cout << "\"aabb\" -> " << s.firstUniqChar("aabb") << endl;               // Expected: -1 (no unique)
+    cout << "\"swiss\" -> " << s.firstUniqChar("swiss") << endl;             // Expected: 1 ('w')
+    cout << "\"z\" -> " << s.firstUniqChar("z") << endl;                     // Expected: 0 ('z')
 }
+
